@@ -8,7 +8,7 @@ export class App {
   todos: Todo[] = [];
   todoDescription = '';
 
-  addTodo() {
+  public addTodo(): void {
     if (this.todoDescription) {
       this.todos.push({
         description: this.todoDescription,
@@ -18,7 +18,7 @@ export class App {
     }
   }
 
-  removeTodo(todo) {
+  public removeTodo(todo): void {
     const index = this.todos.indexOf(todo);
     if (index !== -1) {
       this.todos.splice(index, 1);

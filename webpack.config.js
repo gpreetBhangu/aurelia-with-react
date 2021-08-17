@@ -30,7 +30,7 @@ const cssRules = [
 
 module.exports = ({ production } = {}, {extractCss, analyze, tests, hmr, port, host } = {}) => ({
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: [".ts", ".tsx", ".js"],
     modules: [srcDir, 'node_modules'],
 
     alias: {
@@ -217,7 +217,7 @@ module.exports = ({ production } = {}, {extractCss, analyze, tests, hmr, port, h
         use: cssRules
       },
       { test: /\.html$/i, loader: 'html-loader' },
-      { test: /\.ts$/, loader: "ts-loader" },
+      { test: /\.tsx?$/, loader: "ts-loader" },
       // embed small images and fonts as Data Urls and larger ones as files:
       { test: /\.(png|gif|jpg|cur)$/i, loader: 'url-loader', options: { limit: 8192 } },
       { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff2' } },

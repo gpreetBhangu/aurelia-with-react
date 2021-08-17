@@ -1,6 +1,7 @@
 <template>
-  <h1>${heading}</h1>
+  <require from="./TestReact/test-react"></require>
 
+  <h1>${heading}</h1>
   <form submit.trigger="addTodo()">
     <input type="text" value.bind="todoDescription">
     <button type="submit" disabled.bind="!todoDescription">Add Todo</button>
@@ -15,4 +16,5 @@
       <button click.trigger="removeTodo(todo)">Remove</button>
     </li>
   </ul>
+  <test-react></test-react>
 </template>

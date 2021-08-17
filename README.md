@@ -34,3 +34,9 @@ To run in watch mode, `au test --watch` or `au jest --watch`.
 
 ## Cheat Sheet 
 https://aurelia.io/docs/fundamentals/cheat-sheet#databinding
+
+Difference between a Component and a View in Aurelia (and their lifecycles)
+https://stackoverflow.com/questions/45079767
+
+Custom-element
+https://aurelia.io/docs/templating/custom-elements
